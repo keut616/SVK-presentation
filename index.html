@@ -3,367 +3,367 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Savannakhet Visitor Briefing</title>
+<title>Savannakhet Visitor Briefing - A4 Edition</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: 'Noto Sans Lao', sans-serif;
-    background-color: #F3F4F6;
-    color: #333333;
-}
-.chart-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 350px;
-    max-height: 400px;
-}
-@media (max-width: 640px) {
-    .chart-container {
-        height: 250px;
+    body {
+        font-family: 'Noto Sans Lao', sans-serif;
+        background-color: #cbd5e1; /* gray-300 background for the preview */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        margin: 0;
+        gap: 2rem;
     }
-}
+
+    /* A4 Landscape Definition */
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    .a4-page {
+        width: 297mm;
+        height: 210mm;
+        background-color: #ffffff;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0; /* Prevents pages from squishing */
+    }
+
+    /* Print specific styling */
+    @media print {
+        body {
+            background-color: transparent;
+            padding: 0;
+            gap: 0;
+        }
+        .a4-page {
+            margin: 0;
+            box-shadow: none;
+            page-break-after: always;
+            page-break-inside: avoid;
+        }
+        /* Ensure exact colors show up in print */
+        * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    }
 </style>
 </head>
-<body class="antialiased pb-12">
+<body class="antialiased">
 
-<div class="w-full bg-gradient-to-r from-[#1A237E] to-[#3949AB] text-white pt-16 pb-24 px-6 shadow-lg rounded-b-[3rem] relative z-0">
-    <div class="max-w-6xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">ຍິນດີຕ້ອນຮັບສູ່ ແຂວງສະຫວັນນະເຂດ</h1>
-        <p class="text-lg md:text-xl font-light max-w-4xl mx-auto text-blue-100">
+<!-- PAGE 1: Intro & Overview -->
+<div class="a4-page">
+    <!-- Header Section -->
+    <div class="h-[45%] bg-gradient-to-r from-[#1A237E] to-[#3949AB] text-white flex flex-col justify-center items-center px-16 shadow-lg rounded-b-[3rem] relative z-10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">ຍິນດີຕ້ອນຮັບສູ່ ແຂວງສະຫວັນນະເຂດ</h1>
+        <p class="text-xl font-light text-center text-blue-100 max-w-4xl">
             ດິນແດນແຫ່ງອະລິຍະທຳ, ປະຫວັດສາດ ແລະ ສູນກາງເສດຖະກິດທີ່ສຳຄັນຂອງພາກໃຕ້. ກ່ອນທີ່ພວກເຮົາຈະເລີ່ມຕົ້ນການເດີນທາງ, ຂໍອະນຸຍາດນຳສະເໜີຂໍ້ມູນພາບລວມ ເພື່ອໃຫ້ການເດີນທາງຄັ້ງນີ້ຂອງທ່ານມີຄວາມສະດວກສະບາຍທີ່ສຸດ.
         </p>
     </div>
+    
+    <!-- Content Section -->
+    <div class="h-[55%] p-10 pt-4 flex flex-col justify-center relative z-0">
+        <div class="bg-white rounded-2xl shadow-md border-l-4 border-[#FFC107] overflow-hidden flex flex-col h-full">
+            <div class="p-6 flex-grow flex items-center bg-gray-50">
+                <!-- Changed text-gray-700 to text-black and text-lg to text-xl -->
+                <p class="text-black text-xl leading-relaxed">
+                    <strong class="text-[#1A237E]">ແຂວງສະຫວັນນະເຂດ</strong> ເປັນແຂວງທີ່ມີເນື້ອທີ່ໃຫຍ່ທີ່ສຸດໃນ ສປປ ລາວ, ມີຊາຍແດນຕິດກັບແຂວງ ຄໍາມ່ວນ, ສາລະວັນ, ປະເທດຫວຽດນາມ ແລະ ປະເທດໄທ ເຊິ່ງເປັນຈຸດເຊື່ອມຕໍ່ສຳຄັນບົນເສັ້ນທາງແລວເສດຖະກິດຕາເວັນອອກ-ຕາເວັນຕົກ (EWEC).
+                </p>
+            </div>
+            <!-- 4 Overview Images -->
+            <div class="h-44 border-t border-gray-100 grid grid-cols-4">
+                <div class="w-full h-full overflow-hidden border-r border-gray-100"><img src="map1.JPG" alt="ຂົວມິດຕະພາບ" class="w-full h-full object-cover"></div>
+                <div class="w-full h-full overflow-hidden border-r border-gray-100"><img src="map2.jpg" alt="ວົງວຽນໄດໂນເສົາ" class="w-full h-full object-cover object-top"></div>
+                <div class="w-full h-full overflow-hidden border-r border-gray-100"><img src="map3.jpg" alt="ພະທາດອີງຮັງ" class="w-full h-full object-cover"></div>
+                <div class="w-full h-full overflow-hidden"><img src="map4.jpg" alt="ພະພຸດທະຮູບ" class="w-full h-full object-cover"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-10">
-
-    <!-- Overview Section -->
-    <div class="mb-12 bg-white rounded-2xl shadow-md border-l-4 border-[#FFC107] overflow-hidden flex flex-col group">
-        <div class="p-6 md:p-8 flex flex-col justify-center">
-            <p class="text-gray-700 text-lg">
-                <strong class="text-[#1A237E]">ແຂວງສະຫວັນນະເຂດ</strong> ເປັນແຂວງທີ່ມີເນື້ອທີ່ໃຫຍ່ທີ່ສຸດໃນ ສປປ ລາວ, ມີຊາຍແດນຕິດກັບແຂວງ ຄໍາມ່ວນ, ສາລະວັນ, ປະເທດຫວຽດນາມ ແລະ ປະເທດໄທ ເຊິ່ງເປັນຈຸດເຊື່ອມຕໍ່ສຳຄັນບົນເສັ້ນທາງແລວເສດຖະກິດຕາເວັນອອກ-ຕາເວັນຕົກ
+<!-- PAGE 2: Districts Map -->
+<div class="a4-page p-10 flex flex-col">
+    <h2 class="text-3xl font-bold text-[#1A237E] mb-6 text-center border-b-2 border-gray-100 pb-4">ເຂດການປົກຄອງປະກອບມີ:</h2>
+    <div class="flex-grow flex items-center justify-between gap-8 h-full overflow-hidden">
+        <!-- Left: Badges -->
+        <div class="w-1/3 flex flex-col items-center justify-center gap-8 h-full">
+            <div class="flex gap-4">
+                <div class="bg-[#1A237E] p-6 rounded-full w-32 h-32 flex flex-col justify-center items-center shadow-inner text-white">
+                    <span class="text-5xl font-extrabold">1</span>
+                    <span class="text-sm font-semibold mt-1">ນະຄອນ</span>
+                </div>
+                <div class="bg-pink-50 p-6 rounded-full w-32 h-32 flex flex-col justify-center items-center shadow-inner text-[#1A237E] border border-pink-100">
+                    <span class="text-5xl font-extrabold">14</span>
+                    <span class="text-sm font-semibold mt-1">ເມືອງ</span>
+                </div>
+            </div>
+            <!-- Changed text-gray-600 to text-black and text-lg to text-xl -->
+            <p class="text-center text-black px-6 text-xl leading-relaxed">
+                <strong class="text-[#1A237E]">ນະຄອນໄກສອນ ພົມວິຫານ</strong><br>
+                <span class="inline-block mt-2">ເປັນເທດສະບານແຂວງ ແລະ ບັນດາເມືອງອ້ອມຂ້າງທີ່ກວ້າງຂວາງ ອຸດົມສົມບູນໄປດ້ວຍຊັບພະຍາກອນ ແລະ ວັດທະນະທຳ.</span>
             </p>
         </div>
-        <div class="w-full border-t border-gray-100 grid grid-cols-4 h-24 sm:h-36 md:h-48">
-            <div class="w-full h-full overflow-hidden border-r border-gray-100">
-                <img src="map1.JPG" onerror="this.src='https://images.unsplash.com/photo-1540483761890-a1f7be05ce34?auto=format&fit=crop&w=400&q=80'" alt="ຂົວມິດຕະພາບ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="w-full h-full overflow-hidden border-r border-gray-100">
-                <img src="map2.jpg" onerror="this.src='https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&w=400&q=80'" alt="ວົງວຽນໄດໂນເສົາ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="w-full h-full overflow-hidden border-r border-gray-100">
-                <img src="map3.jpg" onerror="this.src='https://images.unsplash.com/photo-1598282361730-1c05001ff80f?auto=format&fit=crop&w=400&q=80'" alt="ພະທາດອີງຮັງ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-            </div>
-            <div class="w-full h-full overflow-hidden border-gray-100">
-                <img src="map4.jpg" onerror="this.src='https://images.unsplash.com/photo-1528616781223-9114798e4d27?auto=format&fit=crop&w=400&q=80'" alt="ພະພຸດທະຮູບ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-            </div>
+        <!-- Right: Map -->
+        <div class="w-2/3 h-full flex items-center justify-center p-4 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm relative">
+            <img src="SVK All district.png" alt="ແຜນທີ່ເຂດປົກຄອງແຂວງສະຫວັນນະເຂດ (ອັບເດດ)" class="max-h-full max-w-full object-contain p-2 drop-shadow-md">
         </div>
     </div>
+</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        
-        <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col text-center transform transition duration-500 hover:scale-[1.02]">
-            <h2 class="text-2xl font-bold text-[#1A237E] mb-2">ເຂດການປົກຄອງປະກອບມີ:</h2>
-            <p class="text-gray-600 mb-4"></p>
-            
-            <div class="flex-grow flex flex-col items-center justify-start mt-2">
-                <div class="flex flex-row justify-center gap-6 w-full">
-                    <div class="bg-[#1A237E] p-6 rounded-full w-32 h-32 sm:w-36 sm:h-36 flex flex-col justify-center items-center shadow-inner text-white">
-                        <span class="text-4xl sm:text-5xl font-extrabold text-white">1</span>
-                        <span class="text-xs sm:text-sm font-semibold mt-1">ນະຄອນ</span>
-                    </div>
-                    <div class="bg-pink-50 p-6 rounded-full w-32 h-32 sm:w-36 sm:h-36 flex flex-col justify-center items-center shadow-inner">
-                        <span class="text-4xl sm:text-5xl font-extrabold text-[#1A237E]">14</span>
-                        <span class="text-xs sm:text-sm font-semibold mt-1">ເມືອງ</span>
-                    </div>
-                </div>
-                
-                <!-- Map -->
-                <div class="mt-8 w-full max-w-4xl mx-auto pb-4 relative group">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200 bg-white group-hover:shadow-lg transition-all duration-300">
-                        <img src="SVK All district.png" onerror="this.src='https://placehold.co/800x600/f8fafc/1A237E?text=Map+of+Savannakhet'" alt="ແຜນທີ່ເຂດປົກຄອງແຂວງສະຫວັນນະເຂດ (ອັບເດດ)" class="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500 p-2">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col">
-            <h2 class="text-2xl font-bold text-[#1A237E] mb-4">ຄວາມປອດໄພ & ສຸຂະພາບ</h2>
-            <p class="text-gray-600 mb-6">ພາບລວມຂອງຄວາມພ້ອມດ້ານການຮັກສາຄວາມປອດໄພ ແລະ ການແພດພາຍໃນເທດສະບານແຂວງ.</p>
-            
-            <div class="grid grid-cols-2 gap-4 mt-2">
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-3 text-center bg-gray-50 z-10">
-                        <span class="text-2xl block mb-1">🏥</span>
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base">ໂຮງໝໍ</h4>
-                    </div>
-                    <div class="relative h-20 sm:h-28 overflow-hidden border-t border-gray-100">
-                        <img src="PH.jpg" onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=400&q=80'" alt="ໂຮງໝໍ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    </div>
-                </div>
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-3 text-center bg-gray-50 z-10">
-                        <span class="text-2xl block mb-1">💊</span>
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base">ຄລີນິກ & ຮ້ານຂາຍຢາ</h4>
-                    </div>
-                    <div class="relative h-20 sm:h-28 overflow-hidden border-t border-gray-100">
-                        <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=400&q=80" alt="ຄລີນິກ & ຮ້ານຂາຍຢາ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    </div>
-                </div>
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-3 text-center bg-gray-50 z-10">
-                        <span class="text-2xl block mb-1">🚓</span>
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base">ຕຳຫຼວດ</h4>
-                    </div>
-                    <div class="relative h-20 sm:h-28 overflow-hidden border-t border-gray-100">
-                        <img src="1.jpg" onerror="this.src='https://images.unsplash.com/photo-1555921015-5532091f6026?auto=format&fit=crop&w=400&q=80'" alt="ຕຳຫຼວດ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    </div>
-                </div>
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-3 text-center bg-gray-50 z-10">
-                        <span class="text-2xl block mb-1">🚑</span>
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base">ໜ່ວຍກູ້ໄພ</h4>
-                    </div>
-                    <div class="relative h-20 sm:h-28 overflow-hidden border-t border-gray-100">
-                        <img src="2.jpg" onerror="this.src='https://images.unsplash.com/photo-1587556637785-5b432a672722?auto=format&fit=crop&w=400&q=80'" alt="ໜ່ວຍກູ້ໄພ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Table: Emergency Contacts -->
-            <div class="mt-6 flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 w-full flex-grow">
-                <div class="p-4 z-10 bg-gray-50 border-b border-gray-200">
-                    <h4 class="text-[#1A237E] font-bold text-sm sm:text-base flex items-center gap-2"><span>🚨</span> ເບີໂທສາຍດ່ວນສຸກເສີນ</h4>
-                </div>
-                <div class="overflow-y-auto relative shadow-inner h-full">
-                    <table class="w-full text-sm text-left">
-                        <thead class="bg-[#f8fafc] text-gray-700 shadow-sm z-10">
-                            <tr class="border-b border-gray-200">
-                                <th class="px-4 py-3 font-semibold whitespace-nowrap">ພາກສ່ວນ / ໜ່ວຍງານ</th>
-                                <th class="px-4 py-3 font-semibold whitespace-nowrap">ເບີໂທຕິດຕໍ່</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 text-gray-600">
-                            <tr class="hover:bg-red-50 transition duration-150"><td class="px-4 py-3 font-medium">ຕຳຫຼວດແຂວງ</td><td class="px-4 py-3 font-bold text-red-600">1191</td></tr>
-                            <tr class="hover:bg-red-50 transition duration-150"><td class="px-4 py-3 font-medium">ຕຳຫຼວດຈະລາຈອນ</td><td class="px-4 py-3 font-bold text-red-600">1192</td></tr>
-                            <tr class="hover:bg-red-50 transition duration-150"><td class="px-4 py-3 font-medium">ໜ່ວຍກູ້ໄພສະຫວັນນະເຂດ</td><td class="px-4 py-3 font-bold text-red-600">1623 / 041 214 000</td></tr>
-                            <tr class="hover:bg-red-50 transition duration-150"><td class="px-4 py-3 font-medium">ແພດສຸກເສີນ (ໂຮງໝໍແຂວງ)</td><td class="px-4 py-3 font-bold text-red-600">1195</td></tr>
-                            <tr class="hover:bg-red-50 transition duration-150"><td class="px-4 py-3 font-medium">ໜ່ວຍດັບເພີງ</td><td class="px-4 py-3 font-bold text-red-600">1190</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Services and Transport Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 items-stretch">
-        <!-- Left Side: Recommended Services -->
-        <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col lg:col-span-2">
-            <h2 class="text-2xl font-bold text-[#1A237E] mb-6 flex-none">ຈຸດບໍລິການແນະນຳ</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow">
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-4 z-10 bg-gray-50 flex-none">
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base flex items-center gap-2"><span>💰</span> ທຸລະກຳທາງການເງິນ</h4>
-                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">ທະນາຄານຫຼັກ (BCEL, LDB, JDB), ຕູ້ ATM 24 ຊມ, ແລະ ຮ້ານແລກປ່ຽນເງິນຕາທີ່ຕະຫຼາດສະຫວັນໄຊ.</p>
-                    </div>
-                    <div class="relative flex-grow min-h-[10rem] border-t border-gray-100 flex w-full">
-                        <div class="w-1/2 h-full overflow-hidden border-r border-gray-100 bg-white p-2 flex items-center justify-center">
-                            <img src="BCEL.png" onerror="this.src='https://placehold.co/200x200?text=BCEL'" alt="BCEL" class="max-w-full max-h-full object-contain transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-1/2 h-full overflow-hidden bg-white p-2 flex items-center justify-center">
-                            <img src="LDB.png" onerror="this.src='https://placehold.co/200x200?text=LDB'" alt="LDB" class="max-w-full max-h-full object-contain transform group-hover:scale-110 transition duration-500">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-4 z-10 bg-gray-50 flex-none">
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base flex items-center gap-2"><span>🛍️</span> ຕະຫຼາດ & ຂອງຝາກ</h4>
-                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">ຕະຫຼາດສະຫວັນໄຊສຳລັບເຄື່ອງຫັດຖະກຳ ແລະ ຕະຫຼາດກາງຄືນແຄມຂອງ (Night Market).</p>
-                    </div>
-                    <div class="relative flex-grow min-h-[10rem] overflow-hidden border-t border-gray-100">
-                        <img src="NIGHT.jpg" alt="ຕະຫຼາດ & ຂອງຝາກ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=400&q=80'">
-                    </div>
-                </div>
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-4 z-10 bg-gray-50 flex-none">
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base flex items-center gap-2"><span>🍽️</span> ສະຖານທີທ່ອງທ່ຽວ ແລະ ວັດທະນະທຳ</h4>
-                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">ປີ້ງໄກ່ເຊໂນຕົ້ນຕຳຮັບ, ຮ້ານອາຫານແຄມຂອງຊົມວິວ ແລະ ຢ້ຽມຊົມຫໍໄຕທີ່ສວຍງາມ.</p>
-                    </div>
-                    <div class="relative flex-grow min-h-[13rem] sm:min-h-[15rem] border-t border-gray-100 grid grid-cols-2 grid-rows-2 w-full">
-                        <div class="w-full h-full overflow-hidden border-r border-b border-gray-100">
-                            <img src="hortai.jpg" onerror="this.src='https://images.unsplash.com/photo-1598282361730-1c05001ff80f?auto=format&fit=crop&w=200&q=80'" alt="ຫໍໄຕ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-full h-full overflow-hidden border-b border-gray-100">
-                            <img src="map3.jpg" onerror="this.src='https://images.unsplash.com/photo-1627885474771-33dc0b4d4b1a?auto=format&fit=crop&w=200&q=80'" alt="ພະທາດອີງຮັງ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-full h-full overflow-hidden border-r border-gray-100">
-                            <img src="map2.jpg" onerror="this.src='https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?auto=format&fit=crop&w=200&q=80'" alt="ວົງວຽນໄດໂນເສົາ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-full h-full overflow-hidden border-gray-100">
-                            <img src="im1.jpg" onerror="this.src='https://images.unsplash.com/photo-1582235948753-157949bdc77c?auto=format&fit=crop&w=200&q=80'" alt="ເມືອງເກົ່າ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 group hover:shadow-md transition duration-300">
-                    <div class="p-4 z-10 bg-gray-50 flex-none">
-                        <h4 class="text-[#1A237E] font-bold text-sm sm:text-base flex items-center gap-2"><span>🏨</span> ໂຮງແຮມ & ທີ່ພັກ</h4>
-                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">Savan Resorts, Avalon Residence, Macchiato de Coffee ແລະ ອື່ນໆອີກຫຼາກຫຼາຍ.</p>
-                    </div>
-                    <div class="relative flex-grow min-h-[13rem] sm:min-h-[15rem] border-t border-gray-100 grid grid-cols-2 grid-rows-2 w-full">
-                        <div class="w-full h-full overflow-hidden border-r border-b border-gray-100">
-                            <img src="H1.jpg" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80'" alt="ໂຮງແຮມ 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-full h-full overflow-hidden border-b border-gray-100">
-                            <img src="H2.jpg" onerror="this.src='https://images.unsplash.com/photo-1542314831-c6a4d27ce66f?auto=format&fit=crop&w=200&q=80'" alt="ໂຮງແຮມ 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-full h-full overflow-hidden border-r border-gray-100">
-                            <img src="H3.jpg" onerror="this.src='https://images.unsplash.com/photo-1551882547-ff40c0d5e9af?auto=format&fit=crop&w=200&q=80'" alt="ໂຮງແຮມ 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-full h-full overflow-hidden border-gray-100">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="ໂຮງແຮມ 4" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Table: Directory of Hotels -->
-            <div class="mt-6 flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 w-full">
-                <div class="p-4 z-10 bg-gray-50 border-b border-gray-200">
-                    <h4 class="text-[#1A237E] font-bold text-sm sm:text-base flex items-center gap-2"><span>📞</span> ລາຍຊື່ ແລະ ເບີໂທຕິດຕໍ່ໂຮງແຮມ/ບ້ານພັກ</h4>
-                </div>
-                <div class="overflow-y-auto max-h-[300px] relative shadow-inner">
-                    <table class="w-full text-sm text-left">
-                        <thead class="sticky top-0 bg-[#f8fafc] text-gray-700 shadow-sm z-10">
-                            <tr class="border-b border-gray-200">
-                                <th class="px-4 py-3 font-semibold whitespace-nowrap">ພື້ນທີ່ຕັ້ງ</th>
-                                <th class="px-4 py-3 font-semibold whitespace-nowrap">ຊື່ໂຮງແຮມ / ບ້ານພັກ</th>
-                                <th class="px-4 py-3 font-semibold whitespace-nowrap">ເບີໂທຕິດຕໍ່</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 text-gray-600">
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ ຝັນດີ</td><td class="px-4 py-2.5">020 92177173</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ ອາວາລອນ</td><td class="px-4 py-2.5">041 252875</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ ພູມີໄຊ</td><td class="px-4 py-2.5">020 78998879</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ ຮໍລາ</td><td class="px-4 py-2.5">041 252818</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ ຮຸ່ງເຮືອງ</td><td class="px-4 py-2.5">041 252765</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ B2</td><td class="px-4 py-2.5">020 94 286 859</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ໂຮງແຮມ ແສນສະບາຍ</td><td class="px-4 py-2.5">020 95818569</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ເມກສະຫວັນ</td><td class="px-4 py-2.5">020 96 914 939</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ເພັດສິວິໄລ</td><td class="px-4 py-2.5">020 77434244</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ເວລາ</td><td class="px-4 py-2.5">020 22386868</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ຈຳພອນ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ມະນີລາ</td><td class="px-4 py-2.5">020 77 067 979</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ສອງຄອນ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ມິລະພັນ</td><td class="px-4 py-2.5">020 99 279 101</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ສອງຄອນ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ກັງງຸງພະວັນ</td><td class="px-4 py-2.5">030 4479500</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ອາດສະພອນ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ຜົ້ງຜາໄຊ</td><td class="px-4 py-2.5">020 92 882 172</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ອາດສະພອນ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ພັດທະນາ</td><td class="px-4 py-2.5">020 95 969 994</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ໄຊບູລີ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ສຸດໃຈ</td><td class="px-4 py-2.5">020 94 444 047</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ໄຊບູລີ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ສຸພາລັກພອນ</td><td class="px-4 py-2.5">020 55441197 / 030 9776769</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ພະລານໄຊ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ແກ້ວວິໄລສຸກ</td><td class="px-4 py-2.5">020 98 980 555</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ພະລານໄຊ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ກອງຄຳ</td><td class="px-4 py-2.5">020 92946072</td></tr>
-                            <tr class="hover:bg-blue-50 transition duration-150"><td class="px-4 py-2.5">ເມືອງ ພະລານໄຊ</td><td class="px-4 py-2.5 font-medium">ບ້ານພັກ ວຽງມະນີ</td><td class="px-4 py-2.5">020 91236434</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Side: Transport Section -->
-        <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col lg:col-span-1 border-t-8 border-[#00E5FF]">
-            <h2 class="text-2xl font-bold text-[#1A237E] mb-6 flex-none">ລົດໂດຍສານພາຍໃນເທດສະບານ ແລະ ຕ່າງແຂວງ</h2>
-            
-            <div class="flex flex-col gap-5 flex-grow">
-                <!-- ພາຍໃນເທດສະບານ -->
-                <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-[#00E5FF] shadow-sm flex-none">
-                    <h4 class="font-bold text-[#1A237E] mb-3 flex items-center gap-2">
-                        <span class="text-2xl">🛺</span> ພາຍໃນເທດສະບານ
-                    </h4>
-                    <ul class="space-y-3 text-sm text-gray-700 mb-4">
-                        <li class="flex items-start gap-2">
-                            <span class="text-[#00E5FF] mt-0.5 text-lg">●</span>
-                            <span><strong>ລົດສະກາຍແລັບ (Skylab):</strong> ຮຽກໃຊ້ບໍລິການໄດ້ງ່າຍຕາມຈຸດຕ່າງໆ ເຊັ່ນ ຕະຫຼາດ, ຄິວລົດ ແລະ ໜ້າໂຮງແຮມ.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-[#00E5FF] mt-0.5 text-lg">●</span>
-                            <span><strong>ລົດຮັບຈ້າງຜ່ານແອັບ:</strong> ເລີ່ມມີບໍລິການລົດແທັກຊີ ຫຼື ໃຫ້ທາງໂຮງແຮມຕິດຕໍ່ເອີ້ນໃຫ້ໄດ້.</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="relative h-24 sm:h-32 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex w-full">
-                        <div class="w-1/2 h-full overflow-hidden border-r border-gray-100">
-                            <img src="TT.jpg" onerror="this.src='https://images.unsplash.com/photo-1590408542918-090ea002d2da?auto=format&fit=crop&w=200&q=80'" alt="ລົດສະກາຍແລັບ" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-1/2 h-full overflow-hidden bg-white">
-                            <img src="TX.jpg" onerror="this.src='https://images.unsplash.com/photo-1549315488-3eb2c5dbb70f?auto=format&fit=crop&w=200&q=80'" alt="ລົດແທັກຊີ" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ຕ່າງເມືອງ & ຕ່າງແຂວງ -->
-                <div class="bg-pink-50 p-5 rounded-xl border-l-4 border-[#FF4081] shadow-sm flex-none">
-                    <h4 class="font-bold text-[#1A237E] mb-3 flex items-center gap-2">
-                        <span class="text-2xl">🚍</span> ຕ່າງເມືອງ & ຕ່າງແຂວງ
-                    </h4>
-                    <ul class="space-y-3 text-sm text-gray-700 mb-4">
-                        <li class="flex items-start gap-2">
-                            <span class="text-[#FF4081] mt-0.5 text-lg">●</span>
-                            <span><strong>ສະຖານີລົດສາຍໃຕ້ (ຄິວຫຼັກ 4):</strong> ມີລົດເມປັບອາກາດ ແລະ ລົດຕູ້ ເດີນທາງໄປທຸກເມືອງ ແລະ ຕ່າງແຂວງ.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-[#FF4081] mt-0.5 text-lg">●</span>
-                            <span><strong>ລົດລະຫວ່າງປະເທດ:</strong> ເຊື່ອມຕໍ່ໄປຍັງ ມຸກດາຫານ (ປະເທດໄທ) ແລະ ລາວບາວ (ປະເທດຫວຽດນາມ).</span>
-                        </li>
-                    </ul>
-                    
-                    <div class="relative h-24 sm:h-32 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex w-full">
-                        <div class="w-1/2 h-full overflow-hidden border-r border-gray-100">
-                            <img src="BU2.jpg" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&q=80'" alt="ລົດໂດຍສານຕ່າງແຂວງ" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="w-1/2 h-full overflow-hidden bg-white">
-                            <img src="2TEO.jpg" onerror="this.src='https://images.unsplash.com/photo-1520105072000-f44fc083e508?auto=format&fit=crop&w=200&q=80'" alt="ລົດສອງແຖວ" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ຫ້ອງການ JSI -->
-                <div class="bg-yellow-50 p-5 rounded-xl border-l-4 border-[#FFC107] shadow-sm flex-none mt-2">
-                    <h4 class="font-bold text-[#1A237E] mb-3 flex items-center gap-2">
-                        <span class="text-2xl">🏢</span> ຫ້ອງການ JSI ແຂວງສະຫວັນນະເຂດ
-                    </h4>
-                    <p class="text-sm text-gray-700 mb-4 leading-relaxed">
-                        <strong>ທີ່ຕັ້ງ:</strong> ບ້ານສຸນັນທາ, ນະຄອນໄກສອນ<br>
-                        <strong>ເບີໂທ:</strong> <span class="text-red-500 font-semibold">[ກະລຸນາປ້ອນເບີໂທລະສັບທີ່ນີ້]</span>
-                    </p>
-                    
-                    <div class="relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-sm border border-gray-200 bg-white flex items-center justify-center group p-2">
-                        <img src="JSI SVK.jpeg" onerror="this.src='https://placehold.co/400x400/FFC107/1A237E?text=JSI+Office'" alt="ຮູບຫ້ອງການ JSI" class="w-full h-full object-contain transform group-hover:scale-105 transition duration-500">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<!-- PAGE 3: Security & Health -->
+<div class="a4-page p-10 flex flex-col bg-[#f8fafc]">
+    <h2 class="text-3xl font-bold text-[#1A237E] mb-2 text-center border-b-2 border-gray-200 pb-4">ຄວາມປອດໄພ & ສຸຂະພາບ</h2>
+    <!-- Changed text-gray-500 to text-black and added text-lg -->
+    <p class="text-center text-black text-lg mb-6">ພາບລວມຂອງຄວາມພ້ອມດ້ານການຮັກສາຄວາມປອດໄພ ແລະ ການແພດພາຍໃນເທດສະບານແຂວງ.</p>
     
-    <div class="bg-[#1A237E] text-white p-8 rounded-2xl shadow-xl text-center">
-        <h3 class="text-2xl font-bold mb-3 text-[#00E5FF]">ຂໍໃຫ້ການເດີນທາງຄັ້ງນີ້ເຕັມໄປດ້ວຍຄວາມປະທັບໃຈ</h3>
-        <p class="font-light">ຖ້າທ່ານໃດມີຄຳຖາມ ຫຼື ຕ້ອງການຄວາມຊ່ວຍເຫຼືອເພີ່ມເຕີມ ສາມາດແຈ້ງທີມງານພວກເຮົາໄດ້ຕະຫຼອດເວລາ.</p>
+    <div class="flex-grow flex gap-8 h-full overflow-hidden">
+        <!-- Left: 4 Image Cards -->
+        <div class="w-[55%] grid grid-cols-2 grid-rows-2 gap-5 h-full">
+            
+            <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-3 text-center bg-gray-50 border-b border-gray-100 flex-none z-10">
+                    <span class="text-3xl block mb-0.5">🏥</span><h4 class="text-[#1A237E] font-bold text-2xl">ໂຮງໝໍ</h4>
+                </div>
+                <div class="flex-grow relative min-h-0"><img src="PH.jpg" alt="ໂຮງໝໍ" class="absolute inset-0 w-full h-full object-cover"></div>
+            </div>
+            
+            <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-3 text-center bg-gray-50 border-b border-gray-100 flex-none z-10">
+                    <span class="text-3xl block mb-0.5">💊</span><h4 class="text-[#1A237E] font-bold text-2xl">ຄລີນິກ & ຮ້ານຂາຍຢາ</h4>
+                </div>
+                <div class="flex-grow relative min-h-0"><img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=400&q=80" alt="ຄລີນິກ & ຮ້ານຂາຍຢາ" class="absolute inset-0 w-full h-full object-cover"></div>
+            </div>
+            
+            <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-3 text-center bg-gray-50 border-b border-gray-100 flex-none z-10">
+                    <span class="text-3xl block mb-0.5">🚓</span><h4 class="text-[#1A237E] font-bold text-2xl">ຕຳຫຼວດ</h4>
+                </div>
+                <div class="flex-grow relative min-h-0"><img src="1.jpg" alt="ຕຳຫຼວດ" class="absolute inset-0 w-full h-full object-cover"></div>
+            </div>
+            
+            <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-3 text-center bg-gray-50 border-b border-gray-100 flex-none z-10">
+                    <span class="text-3xl block mb-0.5">🚑</span><h4 class="text-[#1A237E] font-bold text-2xl">ໜ່ວຍກູ້ໄພ</h4>
+                </div>
+                <div class="flex-grow relative min-h-0"><img src="2.jpg" alt="ໜ່ວຍກູ້ໄພ" class="absolute inset-0 w-full h-full object-cover"></div>
+            </div>
+            
+        </div>
+        
+        <!-- Right: Emergency Contacts Table -->
+        <div class="w-[45%] flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden h-full">
+            <div class="p-4 bg-gray-50 border-b border-gray-200 text-center flex-none">
+                <h4 class="text-[#1A237E] font-bold text-2xl flex items-center justify-center gap-2"><span class="text-3xl">🚨</span> ເບີໂທສາຍດ່ວນສຸກເສີນ</h4>
+            </div>
+            <div class="flex-grow p-4 flex flex-col justify-center">
+                <!-- Changed text-base to text-lg -->
+                <table class="w-full text-lg text-left">
+                    <!-- Changed text-gray-700 to text-black -->
+                    <thead class="text-black border-b-2 border-gray-200">
+                        <tr>
+                            <th class="px-4 py-3 font-semibold whitespace-nowrap">ພາກສ່ວນ / ໜ່ວຍງານ</th>
+                            <th class="px-4 py-3 font-semibold whitespace-nowrap">ເບີໂທຕິດຕໍ່</th>
+                        </tr>
+                    </thead>
+                    <!-- Changed text-gray-600 to text-black -->
+                    <tbody class="divide-y divide-gray-100 text-black">
+                        <tr class="hover:bg-red-50"><td class="px-4 py-4 font-medium">ຕຳຫຼວດແຂວງ</td><td class="px-4 py-4 font-bold text-red-600 text-xl">1191</td></tr>
+                        <tr class="hover:bg-red-50"><td class="px-4 py-4 font-medium">ຕຳຫຼວດຈະລາຈອນ</td><td class="px-4 py-4 font-bold text-red-600 text-xl">1192</td></tr>
+                        <tr class="hover:bg-red-50"><td class="px-4 py-4 font-medium">ໜ່ວຍກູ້ໄພສະຫວັນນະເຂດ</td><td class="px-4 py-4 font-bold text-red-600 text-xl">1623 / 041 214 000</td></tr>
+                        <tr class="hover:bg-red-50"><td class="px-4 py-4 font-medium">ແພດສຸກເສີນ (ໂຮງໝໍແຂວງ)</td><td class="px-4 py-4 font-bold text-red-600 text-xl">1195</td></tr>
+                        <tr class="hover:bg-red-50"><td class="px-4 py-4 font-medium">ໜ່ວຍດັບເພີງ</td><td class="px-4 py-4 font-bold text-red-600 text-xl">1190</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+</div>
 
+<!-- PAGE 4: Recommended Services -->
+<div class="a4-page p-10 flex flex-col">
+    <h2 class="text-3xl font-bold text-[#1A237E] mb-6 text-center border-b-2 border-gray-100 pb-4">ຈຸດບໍລິການແນະນຳ</h2>
+    
+    <div class="flex-grow grid grid-cols-2 grid-rows-2 gap-6 h-full overflow-hidden">
+        
+        <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+            <div class="p-4 bg-gray-50 flex-none z-10 border-b border-gray-100">
+                <h4 class="text-[#1A237E] font-bold text-2xl flex items-center gap-2"><span class="text-3xl">💰</span> ທຸລະກຳທາງການເງິນ</h4>
+                <!-- Increased font size to text-base -->
+                <p class="text-base text-black mt-1">ທະນາຄານຫຼັກ (BCEL, LDB, JDB), ຕູ້ ATM 24 ຊມ, ແລະ ຮ້ານແລກປ່ຽນເງິນຕາທີ່ຕະຫຼາດສະຫວັນໄຊ.</p>
+            </div>
+            <!-- Added min-h-0 and relative wrapper for reliable sizing -->
+            <div class="flex-grow flex bg-white p-2 gap-2 min-h-0">
+                <div class="w-1/2 h-full relative flex items-center justify-center p-2"><img src="BCEL.png" class="absolute inset-0 w-full h-full object-contain p-2"></div>
+                <div class="w-1/2 h-full relative flex items-center justify-center p-2 border-l border-gray-100"><img src="LDB.png" class="absolute inset-0 w-full h-full object-contain p-2"></div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+            <div class="p-4 bg-gray-50 flex-none z-10 border-b border-gray-100">
+                <h4 class="text-[#1A237E] font-bold text-2xl flex items-center gap-2"><span class="text-3xl">🛍️</span> ຕະຫຼາດ & ຂອງຝາກ</h4>
+                <!-- Increased font size to text-base -->
+                <p class="text-base text-black mt-1">ຕະຫຼາດສະຫວັນໄຊສຳລັບເຄື່ອງຫັດຖະກຳ ແລະ ຕະຫຼາດກາງຄືນແຄມຂອງ (Night Market).</p>
+            </div>
+            <!-- Added min-h-0 and absolute image -->
+            <div class="flex-grow relative bg-white min-h-0">
+                <img src="NIGHT.jpg" class="absolute inset-0 w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=400&q=80'">
+            </div>
+        </div>
+        
+        <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+            <div class="p-4 bg-gray-50 flex-none z-10 border-b border-gray-100">
+                <h4 class="text-[#1A237E] font-bold text-2xl flex items-center gap-2"><span class="text-3xl">🍽️</span> ສະຖານທີທ່ອງທ່ຽວ ແລະ ວັດທະນະທຳ</h4>
+                <!-- Increased font size to text-base -->
+                <p class="text-base text-black mt-1">ປີ້ງໄກ່ເຊໂນຕົ້ນຕຳຮັບ, ຮ້ານອາຫານແຄມຂອງຊົມວິວ ແລະ ຢ້ຽມຊົມຫໍໄຕທີ່ສວຍງາມ.</p>
+            </div>
+            <!-- Added min-h-0 and absolute wrapper for exact grid proportions without overflow -->
+            <div class="flex-grow grid grid-cols-2 grid-rows-2 bg-white min-h-0">
+                <div class="relative border-r border-b border-gray-100"><img src="hortai.jpg" class="absolute inset-0 w-full h-full object-cover"></div>
+                <div class="relative border-b border-gray-100"><img src="map3.jpg" class="absolute inset-0 w-full h-full object-cover"></div>
+                <div class="relative border-r border-gray-100"><img src="map2.jpg" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                <div class="relative"><img src="im1.jpg" class="absolute inset-0 w-full h-full object-cover"></div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+            <div class="p-4 bg-gray-50 flex-none z-10 border-b border-gray-100">
+                <h4 class="text-[#1A237E] font-bold text-2xl flex items-center gap-2"><span class="text-3xl">🏨</span> ໂຮງແຮມ & ທີ່ພັກ</h4>
+                <!-- Increased font size to text-base -->
+                <p class="text-base text-black mt-1">Savan Resorts, Avalon Residence, Macchiato de Coffee ແລະ ອື່ນໆອີກຫຼາກຫຼາຍ.</p>
+            </div>
+            <!-- Added min-h-0 and absolute wrapper for exact grid proportions without overflow -->
+            <div class="flex-grow grid grid-cols-2 grid-rows-2 bg-white min-h-0">
+                <div class="relative border-r border-b border-gray-100"><img src="H1.jpg" class="absolute inset-0 w-full h-full object-cover"></div>
+                <div class="relative border-b border-gray-100"><img src="H2.jpg" class="absolute inset-0 w-full h-full object-cover"></div>
+                <div class="relative border-r border-gray-100"><img src="H3.jpg" class="absolute inset-0 w-full h-full object-cover"></div>
+                <div class="relative"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" class="absolute inset-0 w-full h-full object-cover"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- PAGE 5: Hotel Directory -->
+<div class="a4-page p-10 flex flex-col bg-[#f8fafc]">
+    <h2 class="text-3xl font-bold text-[#1A237E] mb-6 text-center border-b-2 border-gray-200 pb-4">ລາຍຊື່ ແລະ ເບີໂທຕິດຕໍ່ໂຮງແຮມ/ບ້ານພັກ</h2>
+    <div class="flex-grow bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden flex flex-col justify-start">
+        <!-- Increased font size to text-[16px] -->
+        <table class="w-full text-[16px] text-left">
+            <thead class="bg-[#f1f5f9] text-[#1A237E] border-b-2 border-gray-200">
+                <tr>
+                    <th class="px-6 py-2.5 font-bold whitespace-nowrap">ພື້ນທີ່ຕັ້ງ</th>
+                    <th class="px-6 py-2.5 font-bold whitespace-nowrap">ຊື່ໂຮງແຮມ / ບ້ານພັກ</th>
+                    <th class="px-6 py-2.5 font-bold whitespace-nowrap">ເບີໂທຕິດຕໍ່</th>
+                </tr>
+            </thead>
+            <!-- Changed text-gray-600 to text-black -->
+            <tbody class="divide-y divide-gray-100 text-black">
+                <!-- Changed text-gray-800 to text-black for all hotel names -->
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ ຝັນດີ</td><td class="px-6 py-[6px]">020 92177173</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ ອາວາລອນ</td><td class="px-6 py-[6px]">041 252875</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ ພູມີໄຊ</td><td class="px-6 py-[6px]">020 78998879</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ ຮໍລາ</td><td class="px-6 py-[6px]">041 252818</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ ຮຸ່ງເຮືອງ</td><td class="px-6 py-[6px]">041 252765</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ B2</td><td class="px-6 py-[6px]">020 94 286 859</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ໂຮງແຮມ ແສນສະບາຍ</td><td class="px-6 py-[6px]">020 95818569</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ເມກສະຫວັນ</td><td class="px-6 py-[6px]">020 96 914 939</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ເພັດສິວິໄລ</td><td class="px-6 py-[6px]">020 77434244</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ນະຄອນໄກສອນພົມວິຫານ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ເວລາ</td><td class="px-6 py-[6px]">020 22386868</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ເມືອງ ຈຳພອນ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ມະນີລາ</td><td class="px-6 py-[6px]">020 77 067 979</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ເມືອງ ສອງຄອນ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ມິລະພັນ</td><td class="px-6 py-[6px]">020 99 279 101</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ເມືອງ ສອງຄອນ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ກັງງຸງພະວັນ</td><td class="px-6 py-[6px]">030 4479500</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ເມືອງ ອາດສະພອນ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ຜົ້ງຜາໄຊ</td><td class="px-6 py-[6px]">020 92 882 172</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ເມືອງ ອາດສະພອນ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ພັດທະນາ</td><td class="px-6 py-[6px]">020 95 969 994</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ເມືອງ ໄຊບູລີ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ສຸດໃຈ</td><td class="px-6 py-[6px]">020 94 444 047</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ເມືອງ ໄຊບູລີ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ສຸພາລັກພອນ</td><td class="px-6 py-[6px]">020 55441197 / 030 9776769</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ເມືອງ ພະລານໄຊ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ແກ້ວວິໄລສຸກ</td><td class="px-6 py-[6px]">020 98 980 555</td></tr>
+                <tr class="hover:bg-blue-50"><td class="px-6 py-[6px]">ເມືອງ ພະລານໄຊ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ກອງຄຳ</td><td class="px-6 py-[6px]">020 92946072</td></tr>
+                <tr class="hover:bg-blue-50 bg-gray-50/50"><td class="px-6 py-[6px]">ເມືອງ ພະລານໄຊ</td><td class="px-6 py-[6px] font-medium text-black">ບ້ານພັກ ວຽງມະນີ</td><td class="px-6 py-[6px]">020 91236434</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- PAGE 6: Transport & Contacts -->
+<div class="a4-page p-10 flex flex-col">
+    <h2 class="text-3xl font-bold text-[#1A237E] mb-6 text-center border-b-2 border-gray-100 pb-4">ການເດີນທາງ ແລະ ສະຖານທີ່ຕິດຕໍ່</h2>
+    
+    <div class="flex-grow grid grid-cols-2 gap-8 h-full overflow-hidden">
+        <!-- Left: Transport -->
+        <div class="flex flex-col gap-6 h-full justify-between">
+            <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-[#00E5FF] shadow-sm flex flex-col flex-1">
+                <h4 class="font-bold text-[#1A237E] mb-2 flex items-center gap-2 text-2xl flex-none">
+                    <span class="text-3xl">🛺</span> ພາຍໃນເທດສະບານ
+                </h4>
+                <!-- Changed text-gray-700 to text-black and text-sm to text-base -->
+                <ul class="space-y-2 text-base text-black mb-3 flex-none">
+                    <li class="flex items-start gap-2"><span class="text-[#00E5FF] mt-0.5">●</span><span><strong>ລົດສະກາຍແລັບ (Skylab):</strong> ຮຽກໃຊ້ບໍລິການໄດ້ງ່າຍຕາມຈຸດຕ່າງໆ ເຊັ່ນ ຕະຫຼາດ, ຄິວລົດ.</span></li>
+                    <li class="flex items-start gap-2"><span class="text-[#00E5FF] mt-0.5">●</span><span><strong>ລົດຮັບຈ້າງຜ່ານແອັບ:</strong> ເລີ່ມມີບໍລິການລົດແທັກຊີ ຫຼື ໃຫ້ໂຮງແຮມເອີ້ນໃຫ້ໄດ້.</span></li>
+                </ul>
+                <div class="flex-grow relative flex rounded-lg overflow-hidden border border-blue-100 bg-white min-h-0">
+                    <div class="w-1/2 relative border-r border-blue-100"><img src="TT.jpg" alt="ລົດສະກາຍແລັບ" class="absolute inset-0 w-full h-full object-cover"></div>
+                    <div class="w-1/2 relative"><img src="TX.jpg" alt="ລົດແທັກຊີ" class="absolute inset-0 w-full h-full object-cover"></div>
+                </div>
+            </div>
+            
+            <div class="bg-pink-50 p-5 rounded-xl border-l-4 border-[#FF4081] shadow-sm flex flex-col flex-1">
+                <h4 class="font-bold text-[#1A237E] mb-2 flex items-center gap-2 text-2xl flex-none">
+                    <span class="text-3xl">🚍</span> ຕ່າງເມືອງ & ຕ່າງແຂວງ
+                </h4>
+                <!-- Changed text-gray-700 to text-black and text-sm to text-base -->
+                <ul class="space-y-2 text-base text-black mb-3 flex-none">
+                    <li class="flex items-start gap-2"><span class="text-[#FF4081] mt-0.5">●</span><span><strong>ສະຖານີລົດສາຍໃຕ້ (ຄິວຫຼັກ 4):</strong> ມີລົດເມ ແລະ ລົດຕູ້ ເດີນທາງໄປທຸກເມືອງ.</span></li>
+                    <li class="flex items-start gap-2"><span class="text-[#FF4081] mt-0.5">●</span><span><strong>ລົດລະຫວ່າງປະເທດ:</strong> ມຸກດາຫານ (ປະເທດໄທ) ແລະ ລາວບາວ (ປະເທດຫວຽດນາມ).</span></li>
+                </ul>
+                <div class="flex-grow relative flex rounded-lg overflow-hidden border border-pink-100 bg-white min-h-0">
+                    <div class="w-1/2 relative border-r border-pink-100"><img src="BU2.jpg" alt="ລົດໂດຍສານຕ່າງແຂວງ" class="absolute inset-0 w-full h-full object-cover"></div>
+                    <div class="w-1/2 relative"><img src="2TEO.jpg" alt="ລົດສອງແຖວ" class="absolute inset-0 w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right: JSI -->
+        <div class="flex flex-col h-full bg-yellow-50 p-6 rounded-xl border-l-4 border-[#FFC107] shadow-sm">
+            <h4 class="font-bold text-[#1A237E] mb-4 flex items-center gap-2 text-2xl flex-none">
+                <span class="text-3xl">🏢</span> ຫ້ອງການ JSI ແຂວງສະຫວັນນະເຂດ
+            </h4>
+            <!-- Changed text-gray-700 to text-black and text-base to text-lg -->
+            <p class="text-lg text-black mb-5 leading-relaxed bg-white p-3 rounded-lg border border-yellow-100 shadow-sm flex-none">
+                <strong>ທີ່ຕັ້ງ:</strong> ບ້ານສຸນັນທາ, ນະຄອນໄກສອນ, ຮ່ອມໂຮງແຮມ 7 ຊັ້ນເກົ່າ<br>
+                <strong>ເບີໂທ:</strong>
+            </p>
+            <div class="flex-grow relative rounded-xl overflow-hidden shadow-md border border-gray-200 bg-white p-2 min-h-0">
+                <img src="JSI SVK.jpeg" alt="ຮູບຫ້ອງການ JSI" class="absolute inset-0 w-full h-full object-contain p-2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE 7: Outro / Thank You -->
+<div class="a4-page bg-gradient-to-br from-[#1A237E] to-[#3949AB] text-white flex flex-col justify-center items-center p-16 text-center relative z-10">
+    <!-- Decorative faint circles for background style -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#00E5FF] opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-[#00E5FF] leading-tight">
+        ຂໍໃຫ້ການເດີນທາງຄັ້ງນີ້<br>ເຕັມໄປດ້ວຍຄວາມປະທັບໃຈ
+    </h2>
+    <p class="text-2xl md:text-3xl font-light text-blue-100 max-w-4xl leading-relaxed mb-12">
+        ຖ້າທ່ານໃດມີຄຳຖາມ ຫຼື ຕ້ອງການຄວາມຊ່ວຍເຫຼືອເພີ່ມເຕີມ ພາຍໃນການເດີນທາງ,<br>ສາມາດແຈ້ງທີມງານພວກເຮົາໄດ້ຕະຫຼອດເວລາ.
+    </p>
+    
+    <div class="mt-8 flex flex-col items-center">
+        <span class="text-6xl md:text-7xl mb-4 text-[#FFC107]">🙏</span>
+        <p class="text-2xl font-semibold mt-2 tracking-wide">ຂໍຂອບໃຈ</p>
+    </div>
 </div>
 
 </body>
